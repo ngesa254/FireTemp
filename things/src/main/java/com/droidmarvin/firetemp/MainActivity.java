@@ -43,4 +43,14 @@ public class MainActivity extends Activity {
         Log.d(TAG, "OLED screen activity created");
     }
 
+    private void setupTemp() {
+
+        try {
+            mTemp = new Bmx280(I2C_TEMP_BUS);
+        } catch (IOException e) {
+            Log.e(TAG, "Error while ", e);
+        }
+        Log.d(TAG, "OLED screen activity created");
+    }
+
 }
