@@ -52,5 +52,18 @@ public class MainActivity extends Activity {
         }
         Log.d(TAG, "OLED screen activity created");
     }
+    // Close RGB and Temp when finished
+    @Override
+    protected void onDestroy() {
+
+        try {
+            mTemp.close();
+            mRGB.close();
+        } catch (IOException e) {
+            // error closing LED strip
+        }
+
+        super.onDestroy();
+    }
 
 }
