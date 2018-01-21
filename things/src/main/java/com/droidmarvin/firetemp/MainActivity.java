@@ -56,6 +56,11 @@ public class MainActivity extends Activity {
         Log.d(TAG, "OLED screen activity created");
     }
 
+    //read temperature
+    private void readTemperature (){
+
+    }
+
     // Light it rgb
     private void lightRGB (){
 
