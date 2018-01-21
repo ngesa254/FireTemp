@@ -1,6 +1,7 @@
 package com.droidmarvin.firetemp;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -30,6 +31,8 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
     }
 
     private void setupRGB() {
@@ -51,6 +54,17 @@ public class MainActivity extends Activity {
             Log.e(TAG, "Error while ", e);
         }
         Log.d(TAG, "OLED screen activity created");
+    }
+
+    // Light it rgb
+    private void lightRGB (){
+
+        int[] colors = new int[] {Color.RED, Color.GREEN, Color.BLUE};
+        try {
+            mRGB.write(colors);
+        } catch (IOException e) {
+            // error setting LEDs
+        }
     }
     // Close RGB and Temp when finished
     @Override
