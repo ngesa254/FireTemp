@@ -32,7 +32,8 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
+        lightRGB();
+        readTemperature();
     }
 
     private void setupRGB() {
